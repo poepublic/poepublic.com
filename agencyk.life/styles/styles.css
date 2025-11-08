@@ -1,3 +1,16 @@
+:root {
+  --agencyk-green: #4a8673;
+  --agencyk-blue: #80c7db;
+  --agencyk-yellow: #eec100;
+  --poepublic-yellow: #e6df83;
+  --poepublic-orange: #f28749;
+  --poepublic-pink: #d94862;
+  --poepublic-teal: #05dbf2;
+  --poepublic-white: #f2e2ce;
+  --poepublic-rust: #d9644a;
+  --poepublic-brown: #400101;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -36,11 +49,13 @@ main a {
 }
 
 .poepublic-section {
-  background-color: #e6df83;
+  color: white;
+  background-color: var(--poepublic-orange);
 }
 
 .agencyk-section {
-  background-color: #4a8673;
+  color: white;
+  background-color: var(--agencyk-blue);
 }
 
 .poepublic-section h1, .agencyk-section h1 {
@@ -54,7 +69,7 @@ main a {
 }
 
 .poepublic-section h1 {
-  background-image: url('../images/poepublic-black.png');
+  background-image: url('../images/poepublic-white.png');
   background-position: 50% -130%;
 }
 
