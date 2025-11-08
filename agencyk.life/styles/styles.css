@@ -37,6 +37,8 @@ main a {
 }
 
 .poepublic-section, .agencyk-section {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +60,33 @@ main a {
   background-color: var(--agencyk-blue);
 }
 
-.poepublic-section h1, .agencyk-section h1 {
+.hover-background {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.poepublic-section .hover-background {
+  background-image: url('../images/poepublic-roof.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.agencyk-section .hover-background {
+  background-image: url('../images/agencyk-roof.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+section:hover .hover-background {
+  opacity: 0.5;
+}
+
+section h1 {
+  position: relative;
+  top: 0;
+
   aspect-ratio: 2/1;
   width: 70%;
 
@@ -66,6 +94,8 @@ main a {
 
   background-repeat: no-repeat;
   background-size: contain;
+
+  transition: top 0.3s ease;
 }
 
 .poepublic-section h1 {
@@ -76,6 +106,10 @@ main a {
 .agencyk-section h1 {
   background-image: url('../images/agencyk-white.png');
   background-position: 50% 70%;
+}
+
+section:hover h1 {
+  top: -0.5rem;
 }
 
 @media (aspect-ratio < 1/1) {
